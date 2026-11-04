@@ -15,6 +15,10 @@ repos:
   role: library
 - name: vrixel-shared-services/ss-security
   role: library
+# Ships a container image each product runs in its own runtime (shared lanes own no runtime).
+# Copies the product's Kafka audit topic into a hash-chained Postgres table and an Object Lock archive (VX-15).
+- name: vrixel-shared-services/ss-audit-sink
+  role: library
 approvers:
   g1: [ss-platform-owner]
   g2: [ss-platform-owner]
